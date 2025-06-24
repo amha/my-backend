@@ -18,7 +18,7 @@ export default async function HomePage() {
   return (
     <div className="home">
       <div className="content">
-        {user && <h1>Amha Mogus</h1>}
+        <h1>Amha Mogus</h1>
         <h2>Product Design + Product Development + Innovation + AI</h2>
         <h3>Site coming soon...</h3>
       </div>

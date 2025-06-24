@@ -26,11 +26,10 @@ const HomePage: GlobalConfig = {
     },
     {
       name: 'aboutSection',
-      type: 'richText', // Use richText for flexible content
+      type: 'richText', 
       label: 'About Section Content',
     },
     
-    // Add more sections/fields as needed for your homepage layout
   ],
 };
 
