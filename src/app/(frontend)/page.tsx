@@ -20,13 +20,12 @@ export default async function HomePage() {
       <div className="content">
         <h1>Amha Mogus</h1>
         <h2>Product Design + Product Development + Innovation + AI</h2>
-        <h3>Site coming soon...</h3>
+        <p>This site is being rebuild with a modern stack and AI.</p>
+        <h4>#noMoreWordPress</h4>
       </div>
       <div className="footer">
-        <p>Built with </p>
-        <a className="codeLink" href={fileURL}>
-          <code>NextJs</code> + <code>PayLoad</code> + <code>MongoDB</code>
-        </a>
+        <p>© 2025 Amha Mogus</p>
+        
       </div>
     </div>
   )
