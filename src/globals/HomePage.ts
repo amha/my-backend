@@ -24,11 +24,6 @@ const HomePage: GlobalConfig = {
         
       ],
     },
-    {
-      name: 'aboutSection',
-      type: 'richText', 
-      label: 'About Section Content',
-    },
     
   ],
 };
