@@ -18,7 +18,7 @@ const nextConfig = {
   ],
 
   env: {
-    NEXT_PUBLIC_PAYLOAD_API_URL: process.env.RAILWAY_PUBLIC_DOMAIN || 'http://localhost:3000',
+    NEXT_PUBLIC_PAYLOAD_API_URL: process.env.PAYLOAD_PUBLIC_URL || 'http://localhost:3000',
   },
 }
 
