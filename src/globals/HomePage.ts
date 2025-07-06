@@ -1,5 +1,6 @@
 // src/globals/HomePage.ts
-import type { GlobalConfig } from 'payload/types';
+import type { CollectionConfig } from 'payload'
+import type { GlobalConfig } from 'payload';
 
 const HomePage: GlobalConfig = {
   slug: 'home-page', 
