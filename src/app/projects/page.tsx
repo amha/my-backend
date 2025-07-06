@@ -1,15 +1,23 @@
 import React from 'react'
 
 async function getProjects() {
-  const res = await fetch('http://localhost:3000/api/projects', {
+  const apiUrl = process.env.NEXT_PUBLIC_PAYLOAD_API_URL; 
+
+  const res = await fetch(`${apiUrl}/api/projects`, { 
     headers: {
       'Content-Type': 'application/json',
     },
-    // If access control is set up, you may need an auth token here.
-    next: { revalidate: 60 }, // ISR (optional)
+    next: { revalidate: 60 }, 
   })
+
+  if (!res.ok) {
+    console.error(`Failed to fetch projects: ${res.status} ${res.statusText}`);
+    return []; 
+  }
+
   return res.json()
 }
+
 
 export default async function ProjectsPage() {
   const { docs: projects } = await getProjects()
