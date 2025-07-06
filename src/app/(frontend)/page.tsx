@@ -21,7 +21,7 @@ export default async function HomePage() {
         <h1>Amha Mogus</h1>
         <h2>Product Design + Product Development + Innovation + AI</h2>
         <p>This site is being rebuild with a modern stack and AI.</p>
-        <h4>#goodebyeWordpress</h4>
+        <h4>#goodByeWordpress</h4>
       </div>
       <div className="footer">
         <p>© 2025 Amha Mogus</p>
