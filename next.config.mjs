@@ -2,7 +2,8 @@ import { withPayload } from '@payloadcms/next/withPayload'
 
 /** @type {import('next').NextConfig} */
 
-const INTERNAL_PAYLOAD_URL_FALLBACK = `http://localhost:${process.env.PORT || 3000}`;
+const INTERNAL_BUILD_PORT = 8080; // Diagnostic: Explicitly setting to 8080 for Railway build environment
+const INTERNAL_PAYLOAD_URL_FALLBACK = `http://localhost:${INTERNAL_BUILD_PORT}`;
 const PAYLOAD_URL = process.env.PAYLOAD_PUBLIC_URL || INTERNAL_PAYLOAD_URL_FALLBACK;
 
 //const PAYLOAD_URL = process.env.PAYLOAD_PUBLIC_URL || 'http://localhost:3000'
