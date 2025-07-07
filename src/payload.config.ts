@@ -16,6 +16,8 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
+  serverURL: process.env.RAILWAY_PUBLIC_DOMAIN || 'http://localhost:3000', // OR process.env.PAYLOAD_PUBLIC_URL
+ 
   admin: {
     user: Users.slug,
     // importMap: {
