@@ -2,7 +2,7 @@ import { withPayload } from '@payloadcms/next/withPayload'
 
 /** @type {import('next').NextConfig} */
 
-const PAYLOAD_URL = process.env.PAYLOAD_PUBLIC_URL || 'http://localhost:3000'
+const PAYLOAD_URL = process.env.RAILWAY_PUBLIC_DOMAIN || 'http://localhost:3000'
 console.log(`[next.config.mjs] PAYLOAD_PUBLIC_URL: ${PAYLOAD_URL}`)
 
 const nextConfig = {
