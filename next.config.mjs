@@ -7,19 +7,20 @@ console.log(`[next.config.mjs] PAYLOAD_PUBLIC_URL: ${PAYLOAD_URL}`)
 
 const nextConfig = {
   reactStrictMode: true,
-
-  experimental: {
-    serverComponentsExternalPackages: ['mongoose', 'mongodb'],
-  },
-
-  // Essential for Payload CMS packages to be correctly processed by Next.js
-  transpilePackages: [
-    '@payloadcms/richtext-lexical',
-    '@payloadcms/db-mongodb',
-    '@payloadcms/payload-cloud',
-    '@payloadcms/next', 
-    '@payloadcms/ui',  
+  serverExternalPackages: [
+    'mongoose',
+    'mongodb',
+    '@payloadcms/db-mongodb',   
+    '@payloadcms/payload-cloud' 
   ],
+  
+  transpilePackages: [
+    '@payloadcms/richtext-lexical', // This is mostly frontend/build-time related
+    '@payloadcms/next',            // This is a core Next.js integration package
+    '@payloadcms/ui',              // This contains UI components that need transpilation
+    
+  ],
+
 
   env: {
     NEXT_PUBLIC_PAYLOAD_API_URL: PAYLOAD_URL,
