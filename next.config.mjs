@@ -7,11 +7,11 @@ const INTERNAL_PAYLOAD_URL_FALLBACK = `http://localhost:${INTERNAL_BUILD_PORT}`;
 const PAYLOAD_URL = process.env.PAYLOAD_PUBLIC_URL || INTERNAL_PAYLOAD_URL_FALLBACK;
 
 //const PAYLOAD_URL = process.env.PAYLOAD_PUBLIC_URL || 'http://localhost:3000'
-console.log(`[next.config.mjs] PAYLOAD_PUBLIC_URL: ${{PAYLOAD_URL}}`);
+console.log(`[next.config.mjs] PAYLOAD_PUBLIC_URL: ${PAYLOAD_URL}`);
 console.log(`[next.config.mjs] Final PAYLOAD_URL (resolved): ${PAYLOAD_URL}`);
 console.log(`[next.config.mjs] process.env.PAYLOAD_PUBLIC_URL (from Railway env): ${process.env.PAYLOAD_PUBLIC_URL}`);
 console.log(`[next.config.mjs] process.env.PORT (from Railway env): ${process.env.PORT}`);
-console.log(`[next.config.mjs] process.env.RAILWAY_PUBLIC_DOMAIN (from Railway env): ${{process.env.RAILWAY_PUBLIC_DOMAIN}}`);
+console.log(`[next.config.mjs] process.env.RAILWAY_PUBLIC_DOMAIN (from Railway env): ${process.env.RAILWAY_PUBLIC_DOMAIN}`);
 
 
 const nextConfig = {
