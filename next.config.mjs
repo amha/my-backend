@@ -9,10 +9,10 @@ const PAYLOAD_URL = process.env.PAYLOAD_PUBLIC_URL || INTERNAL_PAYLOAD_URL_FALLB
 //const PAYLOAD_URL = process.env.PAYLOAD_PUBLIC_URL || 'http://localhost:3000'
 console.log(`[next.config.mjs] PAYLOAD_PUBLIC_URL: ${PAYLOAD_URL}`);
 console.log(`[next.config.mjs] Final PAYLOAD_URL (resolved): ${PAYLOAD_URL}`);
-console.log(`[next.config.mjs] process.env.PAYLOAD_PUBLIC_URL (from Railway env): ${process.env.PAYLOAD_PUBLIC_URL}`);
-console.log(`[next.config.mjs] process.env.PORT (from Railway env): ${process.env.PORT}`);
-console.log(`[next.config.mjs] process.env.RAILWAY_PUBLIC_DOMAIN (from Railway env): ${process.env.RAILWAY_PUBLIC_DOMAIN}`);
-
+//console.log(`[next.config.mjs] process.env.PAYLOAD_PUBLIC_URL (from Railway env): ${process.env.PAYLOAD_PUBLIC_URL}`);
+//console.log(`[next.config.mjs] process.env.PORT (from Railway env): ${process.env.PORT}`);
+//console.log(`[next.config.mjs] process.env.RAILWAY_PUBLIC_DOMAIN (from Railway env): ${process.env.RAILWAY_PUBLIC_DOMAIN}`);
+console.log(process.env.NEXT_PUBLIC_PAYLOAD_API_URL);
 
 const nextConfig = {
   reactStrictMode: true,
@@ -32,7 +32,8 @@ const nextConfig = {
 
 
   env: {
-    NEXT_PUBLIC_PAYLOAD_API_URL: PAYLOAD_URL,
+    NEXT_PUBLIC_PAYLOAD_API_URL:
+      process.env.PAYLOAD_PUBLIC_URL || 'http://localhost:3000',
   },
 }
 
