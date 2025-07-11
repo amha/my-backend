@@ -4,7 +4,7 @@ import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
 import { lexicalEditor } from '@payloadcms/richtext-lexical' 
 import path from 'path'
 import { buildConfig } from 'payload' 
-import type { GlobalConfig } from 'payload'; // This line is correct
+import type { GlobalConfig } from 'payload'; 
 import { fileURLToPath } from 'url'
 
 import { Users } from './collections/Users'
