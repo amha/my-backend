@@ -1,0 +1,21 @@
+# don't send dependencies (we install them in Docker)
+node_modules
+
+# don't send build output
+.next
+
+# logs
+npm-debug.log
+yarn-error.log
+
+# local env files (never send secrets!)
+.env
+.env.*
+
+# macOS / Linux junk
+.DS_Store
+
+# Editor junk
+.vscode
+.idea
+*.swp
