@@ -5,6 +5,7 @@ import { withPayload } from '@payloadcms/next/withPayload'
 const nextConfig = {
   output: "standalone",
   reactStrictMode: true,
+  appDir: true,
   serverExternalPackages: [
     'mongoose',
     'mongodb',
